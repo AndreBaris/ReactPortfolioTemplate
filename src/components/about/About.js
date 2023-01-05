@@ -1,9 +1,9 @@
 import React from 'react';
 import Style from './About.module.scss';
 import Terminal from "./Terminal";
-import ProgressBar from 'react-animated-progress-bar';
 import { Box } from "@mui/material";
 import { info } from "../../info/Info";
+import SkillList from "./skills/SkillList";
 
 export default function About() {
     const firstName = info.firstName.toLowerCase()
@@ -19,37 +19,31 @@ export default function About() {
             </p>
         </>;
     }
-    function skillList(x){
-        return info.skills[x].python.map((skill, index) => <li key={index}>{skill.subject}<ProgressBar
-            width="400px"
-            height="10px"
-            rect
-            fontColor="gray"
-            percentage={skill.percentage}
-            rectPadding="1px"
-            rectBorderRadius="20px"
-            trackPathColor="transparent"
-            bgColor="#333333"
-            trackBorderColor="grey" /></li>
-        )
-    }
     function skillsText() {
         return <>
             <p><span style={{ color: info.baseColor }}>{firstName}{lastName} $</span> cd skills/tools
             </p>
             <p><span style={{ color: info.baseColor }}>skills/tools <span
                 className={Style.green}>(main)</span> $</span> ls</p>
-            <p style={{ color: info.baseColor }}> Proficient With</p>
+            <p style={{ color: info.baseColor }}> languages that i love</p>
             <ul className={Style.skills}>
-                {info.skills.proficientWith.map((proficiency, index) => <li key={index}>{proficiency}</li>)}
+                <SkillList skillTitle='languages' />
             </ul>
-            <p style={{ color: info.baseColor }}> Exposed To</p>
+            <p style={{ color: info.baseColor }}> Framworks/Libraries that i know</p>
             <ul className={Style.skills}>
-                {info.skills.exposedTo.map((skill, index) => <li key={index}>{skill}</li>)}
+                <SkillList skillTitle='frameworksLibraries' />
             </ul>
-            <p style={{ color: info.baseColor }}> Python skills</p>
+            <p style={{ color: info.baseColor }}> Concepts that i've studied</p>
             <ul className={Style.skills}>
-                { }
+                {info.skills.concepts.map((concept, index) => <li key={index}>{concept}</li>)}
+            </ul>
+            <p style={{ color: info.baseColor }}> Subjects that i've studied</p>
+            <ul className={Style.skills}>
+                <SkillList skillTitle='subjects' />
+            </ul>
+            <p style={{ color: info.baseColor }}> Tools that i work with</p>
+            <ul className={Style.skills}>
+                {info.skills.tools.map((tools, index) => <li key={index}>{tools}</li>)}
             </ul>
         </>;
     }

@@ -46,12 +46,14 @@ export const info = {
         }
 
     ],
-    bio: "Hello! I'm André. I'm a Fullstack developer, working as a freelancer. I studied Analysis and systems development at UNORP, I enjoy gaming on my free time.",
+    bio: "Hello! I'm André. I'm a Fullstack developer, working as a freelancer. I've studied Analysis and systems development at UNORP, I enjoy gaming on my free time.",
     skills:
     {
-        proficientWith: ['javascript', 'react', 'git', 'github', 'bootstrap', 'html5', 'css3', 'figma'],
-        python: [{ subject: 'automation', percentage: 20 }, { subject: 'machine learning', percentage: 20 }, { subject: 'data science', percentage: 40 }, { subject: 'web scraping', percentage: 70 }],
-        exposedTo: ['nodejs', 'python', 'adobe illustrator']
+        languages: [{title: 'Javascript', percentage: 100},{title: 'HTML', percentage: 100},{title: 'CSS', percentage: 80},{title: 'SQL', percentage: 70},{title: 'Python', percentage: 50},{title: 'PHP', percentage: 40},{title: 'Java', percentage: 40},{title: 'Ruby', percentage: 25}],
+        frameworksLibraries: [{title: 'Angular', percentage: 90}, {title: 'React', percentage: 70}, {title: 'Ionic', percentage: 100}, {title: 'ExpressJS', percentage: 80}, {title: 'ElectronJS', percentage: 60}, {title: 'Bootstrap', percentage: 100}, {title: 'Unreal engine', percentage: 25}],
+        concepts: ['SOLID', 'DRY', 'Clean Code', 'OOP', 'MVC Architectural pattern', 'Code Reuse'],
+        subjects: [{title: 'Automation', percentage: 40}, {title: 'Web scraping', percentage: 90}, {title: 'ML', percentage: 20}, {title: 'Data Science', percentage: 70}, {title: 'UI', percentage: 60}, {title: 'UX', percentage: 80}],
+        tools: ['Postman', 'VS Code', 'GIT', 'Linux'],
     }
     ,
     hobbies: [
